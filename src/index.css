@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Space Mono', monospace;
+  background: #e8e6e1;
+}
+
+/* Custom animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out forwards;
+}
+
+.animate-slide-up {
+  opacity: 0;
+  animation: slide-up 0.5s ease-out forwards;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e8e6e1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1a1a3e;
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2a2a5e;
+}
+
+/* Selection */
+::selection {
+  background: #1a1a3e;
+  color: #e8e6e1;
+}
+
+/* Focus styles */
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #1a1a3e;
+}
+
+/* Placeholder styling */
+input::placeholder {
+  font-family: 'Space Mono', monospace;
+  letter-spacing: 0.1em;
+}
+
+/* Button active state */
+button:active {
+  transform: scale(0.98);
+}
+
+/* Line through animation */
+.line-through {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
